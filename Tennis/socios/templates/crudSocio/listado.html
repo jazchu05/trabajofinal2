@@ -17,14 +17,14 @@
                         <th>Fecha Nacimiento</th>                       
                         <th>Direccion</th>
                         <th>Código Posta</th>
-                        <th>Numero de Telefono</th>
+                        <th>Numero de telefono</th>
                           
                     </tr>
                 </thead>
                 <tbody>
-                    {% for ju in socios %}
+                    {% for ju in socio %}
                     <tr>  
-                                         
+                        <td>{{ ju.id}}</td>                     
                         <td>{{ ju.DNI}}</td>
                         <td>{{ ju.nom}}</td>
                         <td>{{ ju.fechan}}</td>

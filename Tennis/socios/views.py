@@ -10,7 +10,7 @@ from .forms import SociosForm
 
 def listasocios(request):
     socio=Socios.objects.all()
-    return render(request,"CrudSocio/listado.html",{'socios':socio})
+    return render(request,"CrudSocio/listado.html",{'socio':socio})
 
 
 def inicio(request):
@@ -38,7 +38,7 @@ def crear_editarSocio(request,idSocio=0):
         return redirect('listasocios')
         
 def eliminar(request, idSocio):
-    bc=Socios.objects.get(pk=idSocio)
+    bc=Socios.objects.get(id=idSocio)
     bc.delete()
     return redirect('listasocios')
         
