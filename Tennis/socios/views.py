@@ -9,8 +9,8 @@ from .forms import SociosForm
 # Create your views here
 
 def listasocios(request):
-    socios=Socios.objects.all()
-    return render(request,"CrudSocio/listado.html",{'socios':socios})
+    socio=Socios.objects.all()
+    return render(request,"CrudSocio/listado.html",{'socios':socio})
 
 
 def inicio(request):
@@ -38,7 +38,7 @@ def crear_editarSocio(request,idSocio=0):
         return redirect('listasocios')
         
 def eliminar(request, idSocio):
-    bc=Socios.objects.get(id=idSocio)
+    bc=Socios.objects.get(pk=idSocio)
     bc.delete()
     return redirect('listasocios')
         

@@ -9,7 +9,7 @@ from django.db import models
     
 # Create your models here.
 class Socios(models.Model):
-    id = models.AutoField(primary_key=True, db_column='id')
+    idSocio= models.AutoField(primary_key=True, db_column='id')
     DNI=models.IntegerField(verbose_name="DNI")
     nom = models.CharField(max_length=50,verbose_name="Nombre y Apellido")
     fechan=models.DateField(verbose_name="Fecha Nacimiento")
